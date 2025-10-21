@@ -583,6 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b398c3bba7231ac4e8acabfb27400846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkRange: 6
+  player: {fileID: 179341729}
 --- !u!4 &227233439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 473078, guid: 988fc297a71d24254ba0a364fda65476, type: 3}
@@ -4225,5 +4227,5 @@ SceneRoots:
   - {fileID: 1827418540}
   - {fileID: 1798490023}
   - {fileID: 341433136}
-  - {fileID: 19544215}
   - {fileID: 1840572236}
+  - {fileID: 19544215}
