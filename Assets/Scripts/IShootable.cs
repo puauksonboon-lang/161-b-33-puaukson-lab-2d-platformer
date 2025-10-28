@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class IShootable : MonoBehaviour
+public interface IShootable 
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject Buller {  get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Transform ShootPoint { get; set; }
+    
+    public float ReloadTime { get; set; }
+
+    public float WaitTime { get; set; }
+
+    public void Shoot();
+
 }

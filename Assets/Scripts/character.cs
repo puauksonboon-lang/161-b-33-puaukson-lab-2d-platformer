@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     private int health;
     public int Health 
@@ -18,7 +18,7 @@ public abstract class character : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         Health -= damage;
         Debug.Log($"{this.name} took damage {damage}. Current Health: {Health}");
