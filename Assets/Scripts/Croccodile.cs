@@ -13,6 +13,7 @@ public class Croccodile : Enemy , IShootable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Hp.maxValue = 50;
         base.Initialized(50);
         DamageHit = 30;
         //set atk range and target
@@ -22,6 +23,7 @@ public class Croccodile : Enemy , IShootable
     }
     private void FixedUpdate()
     {
+        Hp.value = Health;
         WaitTime += Time.fixedDeltaTime;
         Behavior();
     }
