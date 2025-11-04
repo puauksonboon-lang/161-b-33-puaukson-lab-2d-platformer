@@ -9,6 +9,7 @@ public class Ant : Enemy
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Hp.maxValue = 20;
         base.Initialized(20);
 
         DamageHit = 20;
@@ -42,7 +43,9 @@ public class Ant : Enemy
 
     private void FixedUpdate()
     {
+        
         Behavior();
+        Hp.value = Health;
     }
 
     // Update is called once per frame
