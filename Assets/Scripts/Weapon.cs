@@ -17,7 +17,7 @@ public abstract class Weapon : MonoBehaviour
     }
     public int GetShootDirection()
     {
-        float value = Shooter.ShootPoint.position.x - Shooter.ShootPoint.position.x;
+        float value = Shooter.ShootPoint.position.x - Shooter.ShootPoint.parent.position.x;
         if (value > 0)
             return 1;
         else return -1;

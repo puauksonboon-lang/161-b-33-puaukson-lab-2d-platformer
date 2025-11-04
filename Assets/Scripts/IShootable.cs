@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IShootable 
 {
-    public GameObject Buller {  get; set; }
+    public GameObject Bullet {  get; set; }
 
     public Transform ShootPoint { get; set; }
     

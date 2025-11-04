@@ -26,7 +26,7 @@ public class Ant : Enemy
         
         if (velocity.x > 0 && rb.position.x >= movePoints[1].position.x)
         {
-            Flip();
+            Flip(); 
         }
 
     }

@@ -474,7 +474,7 @@ Transform:
   m_GameObject: {fileID: 149781026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.43, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9526963b180155246848972ddadd5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Buller>k__BackingField: {fileID: 182108, guid: a5638a192258f4059b0e074542d33fbc, type: 3}
+  <Bullet>k__BackingField: {fileID: 0}
   <ShootPoint>k__BackingField: {fileID: 149781027}
   <ReloadTime>k__BackingField: 1
   <WaitTime>k__BackingField: 2.759998
@@ -624,7 +624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkRange: 0
-  player: {fileID: 179341729}
+  player: {fileID: 0}
+  <Bullet>k__BackingField: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
+  <ShootPoint>k__BackingField: {fileID: 1010602866}
 --- !u!4 &220033393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 448308, guid: c07db661138134f589f46b8510d57c9a, type: 3}
@@ -2124,7 +2126,7 @@ Transform:
   m_GameObject: {fileID: 1010602865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.06, y: -0, z: -0.0003554206}
+  m_LocalPosition: {x: -1.55, y: -0, z: -0.0003554206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

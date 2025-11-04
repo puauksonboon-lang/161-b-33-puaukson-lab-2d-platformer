@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : Character, IShootable
 {
-    [field: SerializeField] public GameObject Buller {  get; set; }
+    [field: SerializeField] public GameObject Bullet {  get; set; }
     [field: SerializeField] public Transform ShootPoint {  get; set; }
     [field: SerializeField] public float ReloadTime {  get; set; }
     [field: SerializeField] public float WaitTime {  get; set; }
@@ -18,7 +18,7 @@ public class Player : Character, IShootable
 
     private void FixedUpdate()
     {
-        WaitTime += Time.captureDeltaTime;
+        WaitTime += Time.fixedDeltaTime;
     }
     // Update is called once per frame
     void Update()
@@ -28,9 +28,11 @@ public class Player : Character, IShootable
 
     public void Shoot()
     {
-        if (Input.GetKeyDown("Fire1") && WaitTime >= ReloadTime)
+       
+        //if (Input.GetKeyDown("Fire1") && WaitTime >= ReloadTime)
+        if (Input.GetButtonDown("Fire1") && WaitTime >= ReloadTime) 
         {
-            var buller = Instantiate(Buller, ShootPoint.position, Quaternion.identity);
+            var buller = Instantiate(Bullet, ShootPoint.position, Quaternion.identity);
             Banana banana = buller.GetComponent<Banana>();
             if(banana != null) 
                 banana.InitWeapon(20,this);
@@ -42,6 +44,7 @@ public class Player : Character, IShootable
     public void OnHitWith(Enemy enemy)
     {
         TakeDamage(enemy.DamageHit);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
