@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Character, IShootable
 {
@@ -10,6 +11,7 @@ public class Player : Character, IShootable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Hp.maxValue = 100;
         base.Initialized(100);
         ReloadTime = 1.0f;
         WaitTime = 0.0f;
@@ -23,6 +25,7 @@ public class Player : Character, IShootable
     // Update is called once per frame
     void Update()
     {
+        Hp.value = Health;
         Shoot();
     }
 

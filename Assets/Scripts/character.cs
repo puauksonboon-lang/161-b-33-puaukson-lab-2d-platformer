@@ -1,7 +1,9 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public abstract class Character : MonoBehaviour
 {
+    public Slider Hp;
+
     private int health;
     public int Health 
     {  get { return health; } set { health = (value < 0) ? 0 : value; } }
